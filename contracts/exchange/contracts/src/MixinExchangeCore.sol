@@ -466,9 +466,8 @@ contract MixinExchangeCore is
         internal
         view
     {
-        // Ensure order is valid
-        // An order can only be cancelled if its status is FILLABLE.
-        if (orderInfo.orderStatus != uint8(OrderStatus.FILLABLE)) {
+        // Ensure order has not already been cancelled.
+        if (orderInfo.orderStatus == uint8(OrderStatus.CANCELLED)) {
             LibRichErrors._rrevert(LibExchangeRichErrors.OrderStatusError(
                 orderInfo.orderHash,
                 OrderStatus(orderInfo.orderStatus)
