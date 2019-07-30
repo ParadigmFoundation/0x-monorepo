@@ -1,5 +1,14 @@
 [
     {
+        "version": "3.1.2",
+        "changes": [
+            {
+                "note": "Updated expected typescript output for cli tests to include `getABIDecodedTransactionData` and `getABIDecodedReturnData`",
+                "pr": 2018
+            }
+        ]
+    },
+    {
         "version": "3.1.1",
         "changes": [
             {
