@@ -2,7 +2,6 @@ import { chaiSetup, provider, txDefaults, web3Wrapper } from '@0x/contracts-test
 import { BlockchainLifecycle } from '@0x/dev-utils';
 import { BigNumber } from '@0x/utils';
 import * as chai from 'chai';
-import { DecodedLogArgs, LogWithDecodedArgs } from 'ethereum-types';
 
 import { artifacts, TestAbiContract } from '../src';
 
@@ -64,7 +63,7 @@ describe('TestAbi', () => {
                 car: 'zoom zoom',
             };
             const output = {
-                input: input,
+                input,
                 lorem: '0x12345678',
                 ipsum: '0x87654321',
                 dolor: 'amet',
