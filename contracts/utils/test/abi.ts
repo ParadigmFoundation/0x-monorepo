@@ -11,7 +11,7 @@ const expect = chai.expect;
 
 const blockchainLifecycle = new BlockchainLifecycle(web3Wrapper);
 
-describe.only('TestAbi', () => {
+describe('TestAbi', () => {
     let testAbi: TestAbiContract;
     const runTestAsync = async (contractMethod: any, input: any, output: any) => {
         const transaction = contractMethod.getABIEncodedTransactionData(input);
